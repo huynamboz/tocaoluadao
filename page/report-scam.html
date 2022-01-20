@@ -18,13 +18,13 @@
        <!-- ------- HEADER SECTION ------- -->
        <header id="header">
            <div class="header__navbar">
-                <div class="header__navbar-item">
+                <i class="header__menu-icon show-mb fas fa-bars"></i>
+                <div class="header__navbar-item ">
                     <a href="../index.html" class="header__logo">
-                        <i class="header__logo-icon fas fa-search"></i>
-                        SOI SCAM
+                        S<i class="header__logo-icon fas fa-search"></i>I SCAM
                     </a>
                 </div>
-                <div class="header__navbar-item">
+                <div class="header__navbar-item header__btn-report-wrap">
                     <a href="../page/report-scam.html" class="btn header__btn-report">
                         Gửi Tố Cáo
                     </a>
@@ -36,6 +36,9 @@
        <div id="container">
            <!-- Menu -->
            <div class="container__menu">
+                <a href="./index.html" class="container__menu-logo header__logo show-mb">
+                    S<i class="header__logo-icon fas fa-search"></i>I SCAM
+                </a>
                 <a href="../index.html" class="container__menu-item ">
                     <i class="container__item-icon fas fa-home"></i>
                     Home
@@ -100,7 +103,7 @@
                         <input type="text" id="image" name="image">
                     </div>
                     <p class="form-item_attention">
-                        Ví dụ: Bill chuyển tiền, Ảnh đoạn chát...& chờ 30s để upload
+                        Ví dụ: Bill chuyển tiền, Ảnh đoạn chát...
                     </p>
                     <div class="form-item">
                         <label class="title-content" for="content">
@@ -109,7 +112,7 @@
                         <textarea name="content" id="content" rows="5" required></textarea>
                         <span class="form-message"></span>
                     </div>
-                    <h1 class="container__content-heading" style="margin-top: 28px">
+                    <h1 class="container__content-heading">
                         NGƯỜI XÁC THỰC
                      </h1>
                     <div class="form-item-wrap">
@@ -147,13 +150,11 @@
                 </form>
             </div>  
        </div>
-       <a href="#content-heading" class="btn-goup">
-            <i class="fas fa-angle-up"></i>
-       </a>
    </div> 
    <!-- JS -->
    <script src="../assets/js/validation.js"></script>
    <script src="../assets/js/toast.js"></script>
+   <script src="../assets/js/main.js"></script>
    <script src="../assets/js/report.js"></script>
 
    <!-- Validate -->

@@ -18,6 +18,5 @@ document.body.addEventListener('click', () =>{
     const active = document.querySelector('.active')
     if(active) {
         menu.classList.remove('active')
-
     }
 })

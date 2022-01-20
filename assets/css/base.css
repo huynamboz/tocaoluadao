@@ -106,13 +106,13 @@ body{
 
 .header__logo{
     font-weight: 900;
-    color: var(--primary-color);
+    color: var(--text-color);
     font-size: 2.4rem;
     user-select: none;
 }
 
 .header__logo-icon{
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     color: var(--primary-color);
 
 }
@@ -187,6 +187,7 @@ body{
 .container__menu-logo{
     padding-bottom: 20px;
     display: none;
+    color: var(--text-color)
 }
 
 .container__menu.active{
@@ -291,6 +292,15 @@ body{
     }
     #header{
         padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: #fff;
+    }
+    .header__logo{
+        text-align: center;
     }
     .header__logo-wrap,
     .header__btn-report-wrap{
@@ -336,6 +346,11 @@ body{
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
+    }
+    .container__content{
+        padding: 0 12px;
+        height: auto !important;
+        margin-top: 66px;
     }
 }
 

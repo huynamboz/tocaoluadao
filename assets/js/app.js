@@ -81,7 +81,7 @@ function renderItem(item) {
                     <i class="fas fa-image"></i>
                     Ảnh Chụp Bằng Chứng:
                 </div>
-                ${item.image? `<img src="${item.image}" alt="" class="scammer-info__img">`: 'Không có ảnh'}
+                ${item.image? `<img src="${item.image}" alt="" class="scammer-info__img">`: 'Không có ảnh'}}
             </div>
             <div class="scammer-info__item scammer-info__item-desc">
                 <div class="scammer-info__title">

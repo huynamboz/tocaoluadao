@@ -177,3 +177,42 @@
 .btn-submit.is-loading span{
     display: none;
 }
+
+
+/* Responsive */
+/* Mobile & tablet: width <1024px */
+@media only screen and (max-width: 63.9375em){
+
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+}
+
+/* Mobie: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .form-post{
+        width: 100%;
+    }
+    .form-item-wrap{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .btn-submit{
+        width: 100%;
+    }
+    .container__content-heading,
+    .form-item-wrap{
+        margin-top: 0;
+    }
+}
+
+/* PC Low */
+@media (min-width: 1024px) and (max-width: 1239px) { 
+
+}
+
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+
+}
