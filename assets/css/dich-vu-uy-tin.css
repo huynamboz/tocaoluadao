@@ -253,6 +253,8 @@
 
 .reputation__introduce-content span {
     user-select: text;
+    display: inline;
+
 }
 
 .reputation__introduce-title{
