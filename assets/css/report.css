@@ -97,23 +97,7 @@
 }
 
 .btn-submit{
-    position: relative;
-    display: block;
-    padding: 14px 40px;
-    width: 100px;
-    height: 44px;
     margin: 12px auto;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 8px;
-    user-select: none;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
 }
 .btn-submit:hover{
     opacity: .7;

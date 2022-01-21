@@ -26,8 +26,10 @@
                     </a>
                 </div>
                 <div class="header__navbar-item header__btn-report-wrap">
-                    <a href="../page/report-scam.html" class="btn header__btn-report">
-                        Gửi Tố Cáo
+                    <a href="./report-scam.html">
+                        <button class="btn header__btn-report">
+                            Gửi Tố Cáo
+                        </button>
                     </a>
                 </div>
            </div>
@@ -48,7 +50,7 @@
                     <i class="container__item-icon fas fa-address-card"></i>
                     Giới Thiệu
                 </a>
-                <a href="#" class="container__menu-item">
+                <a href="./rules.html" class="container__menu-item">
                     <i class="container__item-icon fas fa-edit"></i>
                     Điều Khoản
                 </a>
@@ -144,7 +146,7 @@
                             <label for="radio-2">Phốt này trên group tôi chỉ đăng hộ</label>
                         </div>
                     </div>
-                    <button class="btn-submit">
+                    <button class="btn btn-submit">
                         <div class="loader"></div>
                         <span> Đăng </span>
                     </button>
@@ -165,9 +167,9 @@
         formGroupSelector: '.form-item',
         errorSelector: '.form-message',
         rules: [
-            Validator.isRequired('#accountHolder', 'Vui lòng nhập tên kẻ lừa đảo'),
+            Validator.isRequired('#accountHolder', 'Vui lòng nhập tên chủ tài khoản'),
             Validator.minLength('#accountHolder', 6),
-            Validator.isRequired('#accountNumber', 'Vui lòng nhập STK kẻ lừa đảo'),
+            Validator.isRequired('#accountNumber', 'Vui lòng nhập STK '),
             Validator.isRequired('#bank', 'Vui lòng nhập tên ngân hàng'),
             Validator.isRequired('#content', 'Vui lòng nhập nội dung tố cáo'),
             Validator.isRequired('#authorName', 'Vui lòng nhập tên của bạn'),

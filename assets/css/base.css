@@ -4,6 +4,7 @@
     --primary-color: #f33a58;
     --text-color: #333;
     --sub-text-color: #82919b;
+    --box-shadow:rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 *{
@@ -23,51 +24,44 @@ body{
 
 .btn{
     min-width: 100px;
-    background-color: #fff;
-    color: var(--primary-color);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+
+    color: #fff;
     font-weight: 600;
+    padding: 10px;
+    border: none;
     border-radius: 8px;
-    border: 2px solid var(--primary-color);
     user-select: none;
-    transition: all linear 0.1s;
+    transition: all linear .1s;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    -webkit-transition: all linear 0.1s;
-    -moz-transition: all linear 0.1s;
-    -ms-transition: all linear 0.1s;
-    -o-transition: all linear 0.1s;
+    -webkit-transition: all linear .1s;
+    -moz-transition: all linear .1s;
+    -ms-transition: all linear .1s;
+    -o-transition: all linear .1s;
 }
 
 .btn:hover{
-    background-color: var(--primary-color);
-    color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-
-.btn:hover a{
-    color: #fff;
+    opacity: .8;
 }
 
 .blue{
-    border: 2px solid #018efe;
-    background-color: #018efe;
+    background-color: #00B4D8;
 }
 
-.blue:hover{
-    border: 2px solid #018efe;
-    background-color: #018efe;
-    color: #fff;
-    filter: brightness(110%);
-    -webkit-filter: brightness(110%);
-}
-
-.header__btn-report,
-.container__content-option-btn a{
-    padding: 8px 12px;
+.primary-color{
     color: var(--primary-color);
+    font-weight: 600;
 }
+
+
 
 /* Keyframe */
 @keyframes spin{
@@ -80,6 +74,16 @@ body{
     }
 }
 
+
+@keyframes spin-2{
+    to{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+}
 
 /*------------- HEADER SECTION -------------*/
 
@@ -100,6 +104,11 @@ body{
     flex: 1;
 }
 
+.header__navbar-item:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .header__menu-icon{
     display: none;
 }
@@ -107,13 +116,14 @@ body{
 .header__logo{
     font-weight: 900;
     color: var(--text-color);
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     user-select: none;
     display: inline;
+    letter-spacing: 3px;
 }
 
 .header__logo-icon{
-    font-size: 2.1rem;
+    font-size: 2.4rem;
     color: var(--primary-color);
 
 }
@@ -127,6 +137,8 @@ body{
     color: var(--sub-text-color);
     border: 1px solid #dce0e3;
     border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -160,10 +172,7 @@ body{
 }
 
 .header__btn-report{
-    display: block;
     margin-left: auto;
-    width: 120px;
-    text-align: center;
 }
 
 /* ------------- CONTAINER SECTION -------------*/
@@ -188,7 +197,8 @@ body{
 .container__menu-logo{
     padding-bottom: 20px;
     display: none;
-    color: var(--text-color)
+    color: var(--text-color);
+    letter-spacing: 3px;
 }
 
 .container__menu.active{
@@ -223,7 +233,7 @@ body{
 
 
 .container__menu-item:hover{
-    background-color: #f33a5944;
+    background-color: #f33a591a;
 }
 
 .container__item-icon{
@@ -267,6 +277,7 @@ body{
     padding: 20px;
     color: var(--primary-color);
     font-size: 2.8rem;
+    line-height: 2.8rem;
 }
 
 
@@ -304,7 +315,7 @@ body{
         text-align: center;
     }
     .header__logo-wrap,
-    .header__btn-report-wrap{
+    .header__navbar-item:last-child{
         display: none;
     }
     
@@ -315,6 +326,11 @@ body{
 
     .header__menu-icon{
         font-size: 2rem;
+    }
+    .header__navbar-item{
+        display: flex;
+        justify-content:center;
+        align-items: center;
     }
     .container__menu{
         position: fixed;
@@ -351,7 +367,13 @@ body{
     .container__content{
         padding: 0 12px;
         height: auto !important;
-        margin-top: 66px;
+        margin-top: 54px;
+        padding-bottom: 20px;
+    }
+
+    .container__content-heading{
+        line-height: 1.4;
+        font-size: 2.2rem;
     }
 }
 
