@@ -300,6 +300,17 @@
         flex-direction: column;
         gap: 12px;
     }
+    
+    .btn-goup{
+        width: 40px;
+        height: 40px;
+        right: 12px;
+        bottom: 24px;
+    }
+
+    .btn-goup i{
+        font-size: 1.8rem;
+    }
 }
 
 /* PC Low */
