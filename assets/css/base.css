@@ -171,6 +171,16 @@ body{
     border: 1px solid red;
 }
 
+.header__search-remove{
+    display: none;
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+
+.header__search-remove.active{
+    display: block;
+}
+
 .header__btn-report{
     margin-left: auto;
 }

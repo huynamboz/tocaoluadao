@@ -39,8 +39,8 @@ formPost.addEventListener('submit', async function(e) {
     e.preventDefault()
     const scammerList = {
         accountHolder: this.elements['accountHolder'].value,
-        phoneNumber: this.elements['phoneNumber'].value,
-        accountNumber: this.elements['accountNumber'].value,
+        phoneNumber: +this.elements['phoneNumber'].value,
+        accountNumber: +this.elements['accountNumber'].value,
         bank: this.elements['bank'].value,
         image: this.elements['image'].value,
         content: this.elements['content'].value,

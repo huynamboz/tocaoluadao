@@ -98,6 +98,7 @@
 
 .btn-submit{
     margin: 12px auto;
+    position: relative;
 }
 .btn-submit:hover{
     opacity: .7;
@@ -166,7 +167,9 @@
 /* Responsive */
 /* Mobile & tablet: width <1024px */
 @media only screen and (max-width: 63.9375em){
-
+    .form-post{
+        width: 100%;
+    }
 }
 
 /* Tablet: width >= 740px and width < 1024px */
@@ -176,9 +179,7 @@
 
 /* Mobie: width < 740px */
 @media only screen and (max-width: 46.1875em) {
-    .form-post{
-        width: 100%;
-    }
+
     .form-item-wrap{
         grid-template-columns: repeat(1, 1fr);
     }

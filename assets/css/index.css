@@ -215,7 +215,9 @@
 
 /* Mobile & tablet: width <1024px */
 @media only screen and (max-width: 63.9375em){
-
+    .scammer-list{
+        width: 100%;
+    }
 }
 
 /* Tablet: width >= 740px and width < 1024px */
@@ -252,10 +254,6 @@
     .container__content-option-btn{
         width: 65%;
         margin: auto;
-    }
-
-    .scammer-list{
-        width: 100%;
     }
 
     .container__content-heading{
@@ -299,6 +297,16 @@
     .scammer-info__item-desc{
         flex-direction: column;
         gap: 12px;
+    }
+    .btn-goup{
+        width: 40px;
+        height: 40px;
+        right: 12px;
+        bottom: 24px;
+    }
+
+    .btn-goup i{
+        font-size: 1.8rem;
     }
 }
 

@@ -3,10 +3,41 @@ const headerSearchInput = document.querySelector('.header__search-input');
 const loader = document.querySelector('.scammer-list__loader')
 const overlay = document.querySelector('.overlay')
 const overlayImage = document.querySelector('.overlay img')
+const searchRemove = document.querySelector('.header__search-remove')
+const scammerApi = 'https://61e8b8af7ced4a00172ff662.mockapi.io/api/listscammer'
+const scammerList = document.querySelector('.scammer-list')
+
+// Event
 headerSearchInput.addEventListener('click', (e) => {
     e.stopPropagation()
     headerSearch.classList.add('active')
 })
+headerSearchInput.addEventListener('change', debounceFn(function (e) {
+    let path = scammerApi 
+    if(e.target.value !== "") {
+        path = `${scammerApi}?accountNumber=${e.target.value}`
+    searchRemove.classList.add('active')
+
+    }
+    getScammerList(path)
+}, 500))
+
+headerSearchInput.addEventListener('keyup', (e)=> {
+    if(e.target.value.length > 0) {
+        searchRemove.classList.add('active')
+    }else{
+        searchRemove.classList.remove('active')
+
+    }
+})
+
+searchRemove.addEventListener('click', (e)=>{
+    headerSearchInput.value = ""
+    searchRemove.classList.remove('active')
+    getScammerList()
+
+})
+
 
 window.addEventListener('click', (e) => {
     const active = document.querySelector('.active')
@@ -15,15 +46,27 @@ window.addEventListener('click', (e) => {
     }
 })
 
-const scammerApi = 'https://61e8b8af7ced4a00172ff662.mockapi.io/api/listscammer'
-const scammerList = document.querySelector('.scammer-list')
-
-
-
 /* Function */
 function start() {
     getScammerList()
 }start()
+
+
+function debounceFn(func, wait, immediate) {
+    let timeout;
+    return function () {
+      let context = this,
+        args = arguments;
+      let later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      let callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+}
 
 function renderItem(item) {
     const template = `
@@ -115,10 +158,11 @@ function renderItem(item) {
 scammerList.insertAdjacentHTML('afterbegin', template)
 }
 
-async function getScammerList() {
+async function getScammerList(link = scammerApi) {
     loader.classList.add('active')
-    const res = await fetch(scammerApi)
+    const res = await fetch(link)
     const data = await res.json()
+    scammerList.innerHTML = ''
     if(data.length > 0 && Array.isArray(data)) {
         data.forEach(item => {
             renderItem(item)
